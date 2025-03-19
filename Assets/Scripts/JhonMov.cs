@@ -36,7 +36,12 @@ public class JhonMov : MonoBehaviour
         {
             grounded = true;
         }
-        else grounded = false;
+        else{
+            grounded = false;
+            Animator.SetBool("running", false);
+        } 
+
+        Animator.SetBool("jump", !grounded);
 
         if (Input.GetKeyDown(KeyCode.W) && grounded)
         {
