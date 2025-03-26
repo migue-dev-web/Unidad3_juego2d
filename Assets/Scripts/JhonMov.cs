@@ -48,7 +48,7 @@ public class JhonMov : MonoBehaviour
             jump();
         }
 
-        if (Input.GetKey(KeyCode.Space) && Time.time > Lastshoot + 0.25f)
+        if (Input.GetKey(KeyCode.Space) && Time.time > Lastshoot + 0.35f)
         {
             shoot();
             Lastshoot = Time.time;
