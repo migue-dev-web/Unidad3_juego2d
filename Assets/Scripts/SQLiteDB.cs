@@ -4,10 +4,14 @@ using System.Data;
 using UnityEditor.MemoryProfiler;
 using System.IO;
 
+
 public class SQLiteDB : MonoBehaviour
 {
+
   private string dbPath;
   private IDbConnection dbConnection;
+    
+   
     void Start()
     {
        dbPath = "URI=file:" + Application.persistentDataPath + "/gameData.db";
@@ -52,9 +56,9 @@ public class SQLiteDB : MonoBehaviour
 
         if (reader.Read() ){
             Debug.Log($"Monedas: {reader["coins"]}, Nivel 1: {reader["level1Progress"]}, Nivel 2:{reader["level2Progress"]} ");
+           
         }
     }
-    
 
     void OnApplicationQuit()
     {

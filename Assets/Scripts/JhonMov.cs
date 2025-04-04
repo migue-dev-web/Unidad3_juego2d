@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JhonMov : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class JhonMov : MonoBehaviour
     private bool grounded;
     public float speed;
     public float Jumpforce;
+
+    private int healt = 5;
 
 
     void Start()
@@ -71,5 +74,14 @@ private void shoot()
     private void FixedUpdate()
     {
         Rigidbody2D.linearVelocity = new Vector2(Horizontal, Rigidbody2D.linearVelocity.y * speed); 
+    }
+
+    public void hit(int damage)
+    {
+        healt = healt -damage;
+        if ( healt <= 0){
+            Destroy(gameObject);
+            SceneManager.LoadScene("HasMuerto");
+        }
     }
 }

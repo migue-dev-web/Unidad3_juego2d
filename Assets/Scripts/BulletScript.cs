@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -28,4 +29,23 @@ public class BulletScript : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        JhonMov jhon = collision.GetComponent<JhonMov>();
+        GruntScript grunt = collision.GetComponent<GruntScript>();
+
+        if (jhon != null){
+            jhon.hit(1);
+            
+        }
+        if (grunt != null){
+            grunt.hit();
+        }
+
+        DestroyBullet();
+    }
+
+    
 }
