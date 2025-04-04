@@ -367,7 +367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30173d99ef5b0244eaaa7c5f1127167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinstext: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5851,6 +5850,7 @@ GameObject:
   - component: {fileID: 1641352079}
   - component: {fileID: 1641352078}
   - component: {fileID: 1641352080}
+  - component: {fileID: 1641352081}
   m_Layer: 0
   m_Name: john_idle_0
   m_TagString: Player
@@ -6029,6 +6029,18 @@ MonoBehaviour:
   bulletPrefab: {fileID: 130523138326633406, guid: fa288a66dd4cd264494c40e442ddf6ff, type: 3}
   speed: 1
   Jumpforce: 150
+--- !u!114 &1641352081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641352074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1848c70b2128fba4eb1bc5b88611d92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1657315308
 GameObject:
   m_ObjectHideFlags: 0

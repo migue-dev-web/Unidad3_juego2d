@@ -1,5 +1,4 @@
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
@@ -38,7 +37,7 @@ public class BulletScript : MonoBehaviour
 
         if (jhon != null){
             jhon.hit(1);
-            
+
         }
         if (grunt != null){
             grunt.hit();
